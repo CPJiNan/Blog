@@ -52,8 +52,8 @@ params:
         lastUpdated: Jan 02, 2006 15:04 MST
 
     sidebar:
-        emoji: 🍥
-        subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        emoji: ✨
+        subtitle: 热爱，所以平山海。
         avatar:
             enabled: true
             local: true
@@ -62,9 +62,9 @@ params:
     article:
         math: false
         toc: true
-        readingTime: true
+        readingTime: false
         license:
-            enabled: true
+            enabled: false
             default: Licensed under CC BY-NC-SA 4.0
 
     comments:
