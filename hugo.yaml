@@ -1,8 +1,8 @@
 baseurl: https://cpjinan.github.io/Blog
-languageCode: en-us
+languageCode: zh-cn
 theme: hugo-theme-stack
-title: Example Site
-copyright: Example Person
+title: 季楠
+copyright: CPJiNan
 
 # Theme i18n support
 # Available values: ar, bn, ca, de, el, en, es, fr, hu, id, it, ja, ko, nl, pt-br, th, uk, zh-cn, zh-hk, zh-tw
@@ -14,12 +14,12 @@ hasCJKLanguage: false
 
 languages:
     zh-cn:
-        languageName: 中文
-        title: 演示站点
+        languageName: 简体中文
+        title: 季楠
         weight: 1
         params:
             sidebar:
-                subtitle: 演示说明
+                subtitle: CPJiNan
 
 services:
     # Change it to your Disqus shortname before using
@@ -202,15 +202,15 @@ menu:
     social:
         - identifier: github
           name: GitHub
-          url: https://github.com/CaiJimmy/hugo-theme-stack
+          url: https://github.com/CPJiNan
           params:
               icon: brand-github
 
-        - identifier: twitter
-          name: Twitter
-          url: https://twitter.com
+        - identifier: bilibili
+          name: Bilibili
+          url: https://space.bilibili.com/489740670
           params:
-              icon: brand-twitter
+              icon: brand-bilibili
 
 related:
     includeNewer: true
