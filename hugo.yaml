@@ -200,6 +200,11 @@ menu:
     main: []
 
     social:
+        - identifier: qq
+          name: QQ
+          url: https://qm.qq.com/q/G79pz4UmME
+          params:
+              icon: qq
         - identifier: github
           name: GitHub
           url: https://github.com/CPJiNan
