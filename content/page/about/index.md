@@ -5,8 +5,8 @@ aliases:
   - about-hugo
   - contact
 menu:
-    main: 
-        weight: -90
-        params:
-            icon: user
+  main:
+    weight: -90
+    params:
+      icon: user
 ---
