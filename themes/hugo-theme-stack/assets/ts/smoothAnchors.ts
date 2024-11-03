@@ -34,4 +34,4 @@ function setupSmoothAnchors() {
     });
 }
 
-export { setupSmoothAnchors };
+export {setupSmoothAnchors};

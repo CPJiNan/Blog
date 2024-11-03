@@ -12,8 +12,7 @@ function createElement(tag, attrs, children) {
 
             if (name == "dangerouslySetInnerHTML") {
                 element.innerHTML = value.__html;
-            }
-            else if (value === true) {
+            } else if (value === true) {
                 element.setAttribute(name, name);
             } else if (value !== false && value != null) {
                 element.setAttribute(name, value.toString());

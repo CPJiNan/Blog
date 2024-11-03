@@ -46,7 +46,7 @@ class Search {
     private resultTitle: HTMLHeadElement;
     private resultTitleTemplate: string;
 
-    constructor({ form, input, list, resultTitle, resultTitleTemplate }) {
+    constructor({form, input, list, resultTitle, resultTitleTemplate}) {
         this.form = form;
         this.input = input;
         this.list = list;
@@ -56,13 +56,28 @@ class Search {
         /// Check if there's already value in the search input
         if (this.input.value.trim() !== '') {
             this.doSearch(this.input.value.split(' '));
-        }
-        else {
+        } else {
             this.handleQueryString();
         }
 
         this.bindQueryStringChange();
         this.bindSearchForm();
+    }
+
+    public static render(item: pageData) {
+        return <article>
+            <a href={item.permalink}>
+                <div class="article-details">
+                    <h2 class="article-title" dangerouslySetInnerHTML={{__html: item.title}}></h2>
+                    <section class="article-preview" dangerouslySetInnerHTML={{__html: item.preview}}></section>
+                </div>
+                {item.image &&
+                    <div class="article-image">
+                        <img src={item.image} loading="lazy"/>
+                    </div>
+                }
+            </a>
+        </article>;
     }
 
     /**
@@ -95,8 +110,7 @@ class Search {
                 resultArray.push(`${replaceHTMLEnt(str.substring(lastIndex, lastIndex + offset))} [...] `);
                 resultArray.push(`${replaceHTMLEnt(str.substring(item.start - offset, item.start))}`);
                 charCount += offset * 2;
-            }
-            else {
+            } else {
                 /// If the match is too close to the end of last match, don't add ellipsis
                 resultArray.push(replaceHTMLEnt(str.substring(lastIndex, item.start)));
                 charCount += item.start - lastIndex;
@@ -134,6 +148,37 @@ class Search {
         }
 
         return resultArray.join('');
+    }
+
+    private static updateQueryString(keywords: string, replaceState = false) {
+        const pageURL = new URL(window.location.toString());
+
+        if (keywords === '') {
+            pageURL.searchParams.delete('keyword')
+        } else {
+            pageURL.searchParams.set('keyword', keywords);
+        }
+
+        if (replaceState) {
+            window.history.replaceState('', '', pageURL.toString());
+        } else {
+            window.history.pushState('', '', pageURL.toString());
+        }
+    }
+
+    public async getData() {
+        if (!this.data) {
+            /// Not fetched yet
+            const jsonURL = this.form.dataset.json;
+            this.data = await fetch(jsonURL).then(res => res.json());
+            const parser = new DOMParser();
+
+            for (const item of this.data) {
+                item.content = parser.parseFromString(item.content, 'text/html').body.innerText;
+            }
+        }
+
+        return this.data;
     }
 
     private async searchKeywords(keywords: string[]) {
@@ -174,8 +219,7 @@ class Search {
             if (titleMatches.length > 0) result.title = Search.processMatches(result.title, titleMatches, false);
             if (contentMatches.length > 0) {
                 result.preview = Search.processMatches(result.content, contentMatches);
-            }
-            else {
+            } else {
                 /// If there are no matches in the content, use the first 140 characters as preview
                 result.preview = replaceHTMLEnt(result.content.substring(0, 140));
             }
@@ -207,21 +251,6 @@ class Search {
 
     private generateResultTitle(resultLen, time) {
         return this.resultTitleTemplate.replace("#PAGES_COUNT", resultLen).replace("#TIME_SECONDS", time);
-    }
-
-    public async getData() {
-        if (!this.data) {
-            /// Not fetched yet
-            const jsonURL = this.form.dataset.json;
-            this.data = await fetch(jsonURL).then(res => res.json());
-            const parser = new DOMParser();
-
-            for (const item of this.data) {
-                item.content = parser.parseFromString(item.content, 'text/html').body.innerText;
-            }
-        }
-
-        return this.data;
     }
 
     private bindSearchForm() {
@@ -266,44 +295,9 @@ class Search {
 
         if (keywords) {
             this.doSearch(keywords.split(' '));
-        }
-        else {
+        } else {
             this.clear()
         }
-    }
-
-    private static updateQueryString(keywords: string, replaceState = false) {
-        const pageURL = new URL(window.location.toString());
-
-        if (keywords === '') {
-            pageURL.searchParams.delete('keyword')
-        }
-        else {
-            pageURL.searchParams.set('keyword', keywords);
-        }
-
-        if (replaceState) {
-            window.history.replaceState('', '', pageURL.toString());
-        }
-        else {
-            window.history.pushState('', '', pageURL.toString());
-        }
-    }
-
-    public static render(item: pageData) {
-        return <article>
-            <a href={item.permalink}>
-                <div class="article-details">
-                    <h2 class="article-title" dangerouslySetInnerHTML={{ __html: item.title }}></h2>
-                    <section class="article-preview" dangerouslySetInnerHTML={{ __html: item.preview }}></section>
-                </div>
-                {item.image &&
-                    <div class="article-image">
-                        <img src={item.image} loading="lazy" />
-                    </div>
-                }
-            </a>
-        </article>;
     }
 }
 

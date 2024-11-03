@@ -1,25 +1,26 @@
 <meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta content='width=device-width, initial-scale=1' name='viewport'>
 
 {{- $description := partialCached "data/description" . .RelPermalink -}}
-<meta name='description' {{ printf "content=%q" $description | safeHTMLAttr }}>
-{{ with .Params.Keywords }}<meta name="keywords" content="{{ delimit . ", " }}">{{ end }}
+<meta name='description' printf {{ "content=%q" $description | safeHTMLAttr }}>
+{{ with .Params.Keywords }}
+<meta , content="{{ delimit . " name="keywords" " }}">{{ end }}
 
 {{- $title := partial "data/title" . -}}
 <title>{{ $title }}</title>
 
-<link rel='canonical' href='{{ .Permalink }}'>
+<link href='{{ .Permalink }}' rel='canonical'>
 
 {{- partial "head/style.html" . -}}
 {{- partial "head/script.html" . -}}
 {{- partial "head/opengraph/include.html" . -}}
 
 {{- range .AlternativeOutputFormats -}}
-    <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
+<link href="{{ .Permalink | safeURL }}" rel="{{ .Rel }}" type="{{ .MediaType.Type }}">
 {{- end -}}
 
 {{ with .Site.Params.favicon }}
-    <link rel="shortcut icon" href="{{ . | relURL }}" />
+<link href="{{ . | relURL }}" rel="shortcut icon"/>
 {{ end }}
 
 {{- template "_internal/google_analytics.html" . -}}

@@ -1,73 +1,73 @@
 toggleMenu:
-    other: Menü Kapcsolása
+  other: Menü Kapcsolása
 
 darkMode:
-    other: Sötét Mód
+  other: Sötét Mód
 
 list:
-    page:
-        one: "{{ .Count }} oldal"
-        other: "{{ .Count }} oldalak"
+  page:
+    one: "{{ .Count }} oldal"
+    other: "{{ .Count }} oldalak"
 
-    section:
-        other: Szekció
+  section:
+    other: Szekció
 
-    subsection:
-        one: Alszekció
-        other: Alszekciók
+  subsection:
+    one: Alszekció
+    other: Alszekciók
 
 article:
-    back:
-        other: Vissza
+  back:
+    other: Vissza
 
-    tableOfContents:
-        other: Tartalomjegyzék
+  tableOfContents:
+    other: Tartalomjegyzék
 
-    relatedContent:
-        other: Kapcsolódó tartalom
+  relatedContent:
+    other: Kapcsolódó tartalom
 
-    lastUpdatedOn:
-        other: Utolsó frissítés időpontja
+  lastUpdatedOn:
+    other: Utolsó frissítés időpontja
 
-    readingTime:
-        one: "{{ .Count }} percnyi olvasmány"
-        other: "{{ .Count }} percnyi olvasmány"
+  readingTime:
+    one: "{{ .Count }} percnyi olvasmány"
+    other: "{{ .Count }} percnyi olvasmány"
 
 notFound:
-    title:
-        other: Nem található
+  title:
+    other: Nem található
 
-    subtitle:
-        other: Ez az oldal nem létezik
+  subtitle:
+    other: Ez az oldal nem létezik
 
 widget:
-    archives:
-        title:
-            other: Archívum
+  archives:
+    title:
+      other: Archívum
 
-        more:
-            other: Több
+    more:
+      other: Több
 
-    tagCloud:
-        title:
-            other: Cimkék
-    categoriesCloud:
-        title:
-            other: Kategóriák
+  tagCloud:
+    title:
+      other: Cimkék
+  categoriesCloud:
+    title:
+      other: Kategóriák
 
 search:
-    title:
-        other: Keresés
+  title:
+    other: Keresés
 
-    placeholder:
-        other: Írj valamit...
+  placeholder:
+    other: Írj valamit...
 
-    resultTitle:
-        other: "#PAGES_COUNT oldal (#TIME_SECONDS másodperc alatt)"
+  resultTitle:
+    other: "#PAGES_COUNT oldal (#TIME_SECONDS másodperc alatt)"
 
 footer:
-    builtWith:
-        other: "{{ .Generator }} használatával készült"
+  builtWith:
+    other: "{{ .Generator }} használatával készült"
 
-    designedBy:
-        other: A {{ .Theme }} dizájnt {{ .DesignedBy }} tervezte
+  designedBy:
+    other: A {{ .Theme }} dizájnt {{ .DesignedBy }} tervezte
