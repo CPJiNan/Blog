@@ -23,7 +23,7 @@ function scrollToTocElement(tocElement: HTMLElement, scrollableNavigation: HTMLE
     if (scrollTop < 0) {
         scrollTop = 0;
     }
-    scrollableNavigation.scrollTo({top: scrollTop, behavior: "smooth"});
+    scrollableNavigation.scrollTo({ top: scrollTop, behavior: "smooth" });
 }
 
 type IdToElementMap = { [key: string]: HTMLElement };
@@ -43,9 +43,7 @@ function buildIdToNavigationElementMap(navigation: NodeListOf<Element>): IdToEle
 
 function computeOffsets(headers: NodeListOf<Element>) {
     let sectionsOffsets = [];
-    headers.forEach((header: HTMLElement) => {
-        sectionsOffsets.push({id: header.id, offset: header.offsetTop})
-    });
+    headers.forEach((header: HTMLElement) => { sectionsOffsets.push({ id: header.id, offset: header.offsetTop }) });
     sectionsOffsets.sort((a, b) => a.offset - b.offset);
     return sectionsOffsets;
 }
@@ -120,7 +118,7 @@ function setupScrollspy() {
     }
 
     window.addEventListener("scroll", debounced(scrollHandler));
-
+    
     // Resizing may cause the offset values to change: recompute them.
     function resizeHandler() {
         sectionsOffsets = computeOffsets(headers);
@@ -130,4 +128,4 @@ function setupScrollspy() {
     window.addEventListener("resize", debounced(resizeHandler));
 }
 
-export {setupScrollspy};
+export { setupScrollspy };

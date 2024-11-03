@@ -1,5 +1,5 @@
 {{- with .Site.Params.comments.vssue -}}
-<link href="https://unpkg.com/vssue/dist/vssue.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="https://unpkg.com/vssue/dist/vssue.min.css" />
 
 <div id="vssue"></div>
 
@@ -14,25 +14,14 @@
                 props: {
                     title: "{{ $.Title }}",
                     options: {
-                        autoCreateIssue: {
-    { default
-        false.autoCreateIssue
-    }
-    },
-    owner: "{{ .owner }}",
-        repo
-    :
-    "{{ .repo }}",
-        clientId
-    :
-    "{{ .clientId }}",
-        clientSecret
-    :
-    "{{ .clientSecret }}",
-    },
-    },
-    }),
-    })
-    ;
+                        autoCreateIssue: {{ default false .autoCreateIssue }},
+                        owner: "{{ .owner }}",
+                        repo: "{{ .repo }}",
+                        clientId: "{{ .clientId }}",
+                        clientSecret: "{{ .clientSecret }}",
+                    },
+                },
+            }),
+    });
 </script>
 {{- end -}}

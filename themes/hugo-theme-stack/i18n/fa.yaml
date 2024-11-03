@@ -1,73 +1,73 @@
 toggleMenu:
-  other: منو
+    other: منو
 
 darkMode:
-  other: حالت شب
+    other: حالت شب
 
 list:
-  page:
-    one: "{{ .Count }} صفحه"
-    other: "{{ .Count }} صفحه"
+    page:
+        one: "{{ .Count }} صفحه"
+        other: "{{ .Count }} صفحه"
 
-  section:
-    other: بخش
+    section:
+        other: بخش
 
-  subsection:
-    one: زیربخش
-    other: زیربخش
+    subsection:
+        one: زیربخش
+        other: زیربخش
 
 article:
-  back:
-    other: قبلی
+    back:
+        other: قبلی
 
-  tableOfContents:
-    other: فهرست
+    tableOfContents:
+        other: فهرست
 
-  relatedContent:
-    other: مطالب مرتبط
+    relatedContent:
+        other: مطالب مرتبط
 
-  lastUpdatedOn:
-    other: آخرین بروزرسانی در
+    lastUpdatedOn:
+        other: آخرین بروزرسانی در
 
-  readingTime:
-    one: "مطالعه در {{ .Count }} دقیقه"
-    other: "مطالعه در {{ .Count }} دقیقه"
+    readingTime:
+        one: "مطالعه در {{ .Count }} دقیقه"
+        other: "مطالعه در {{ .Count }} دقیقه"
 
 notFound:
-  title:
-    other: یافت نشد
+    title:
+        other: یافت نشد
 
-  subtitle:
-    other: این صحه وجود ندارد
+    subtitle:
+        other: این صحه وجود ندارد
 
 widget:
-  archives:
-    title:
-      other: آرشیو
+    archives:
+        title:
+            other: آرشیو
 
-    more:
-      other: بیشتر
+        more:
+            other: بیشتر
 
-  tagCloud:
-    title:
-      other: تگ ها
-  categoriesCloud:
-    title:
-      other: دسته بندی
+    tagCloud:
+        title:
+            other: تگ ها
+    categoriesCloud:
+        title:
+            other: دسته بندی
 
 search:
-  title:
-    other: جستجو
+    title:
+        other: جستجو
 
-  placeholder:
-    other: تایپ کنید ...
+    placeholder:
+        other: تایپ کنید ...
 
-  resultTitle:
-    other: "#PAGES_COUNT صفحه (#TIME_SECONDS ثانیه)"
+    resultTitle:
+        other: "#PAGES_COUNT صفحه (#TIME_SECONDS ثانیه)"
 
 footer:
-  builtWith:
-    other: قدرت گرفته از {{ .Generator }}
+    builtWith:
+        other: قدرت گرفته از {{ .Generator }}
 
-  designedBy:
-    other: قالب {{ .Theme }} ساخته شده توسط {{ .DesignedBy }}
+    designedBy:
+        other: قالب {{ .Theme }} ساخته شده توسط {{ .DesignedBy }}

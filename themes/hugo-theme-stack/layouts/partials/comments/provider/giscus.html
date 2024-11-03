@@ -1,20 +1,20 @@
 {{- with .Site.Params.comments.giscus -}}
 <script
-        async
-        crossorigin="anonymous"
-        data-category="{{- .category -}}"
-        data-category-id="{{- .categoryID -}}"
-        data-emit-metadata="{{- default 0 .emitMetadata -}}"
-        data-input-position="{{- default `top` .inputPosition -}}"
-        data-lang="{{- default (default `en` $.Language.LanguageCode) .lang -}}"
-        data-loading="{{- .loading -}}"
-        data-mapping="{{- default `title` .mapping -}}"
-        data-reactions-enabled="{{- default 1 .reactionsEnabled -}}"
-        data-repo="{{- .repo -}}"
-        data-repo-id="{{- .repoID -}}"
-        data-strict="{{- default 0 .strict -}}"
-        data-theme="{{- default `light` .lightTheme -}}"
-        src="https://giscus.app/client.js"
+    src="https://giscus.app/client.js"
+    data-repo="{{- .repo -}}"
+    data-repo-id="{{- .repoID -}}"
+    data-category="{{- .category -}}"
+    data-category-id="{{- .categoryID -}}"
+    data-mapping="{{- default `title` .mapping -}}"
+    data-strict="{{- default 0 .strict -}}"
+    data-reactions-enabled="{{- default 1 .reactionsEnabled -}}"
+    data-emit-metadata="{{- default 0 .emitMetadata -}}"
+    data-input-position="{{- default `top` .inputPosition -}}"
+    data-theme="{{- default `light` .lightTheme -}}"
+    data-lang="{{- default (default `en` $.Language.LanguageCode) .lang -}}"
+    data-loading="{{- .loading -}}"
+    crossorigin="anonymous"
+    async
 ></script>
 <script>
     function setGiscusTheme(theme) {

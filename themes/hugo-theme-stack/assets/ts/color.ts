@@ -17,7 +17,8 @@ let colorsCache: { [key: string]: colorScheme } = {};
 if (localStorage.hasOwnProperty('StackColorsCache')) {
     try {
         colorsCache = JSON.parse(localStorage.getItem('StackColorsCache'));
-    } catch (e) {
+    }
+    catch (e) {
         colorsCache = {};
     }
 }

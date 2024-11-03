@@ -31,6 +31,31 @@ class StackGallery {
         this.bindClick();
     }
 
+    private loadItems(container: HTMLElement) {
+        this.items = [];
+
+        const figures = container.querySelectorAll('figure.gallery-image');
+
+        for (const el of figures) {
+            const figcaption = el.querySelector('figcaption'),
+                img = el.querySelector('img');
+
+            let aux: PhotoSwipeItem = {
+                w: parseInt(img.getAttribute('width')),
+                h: parseInt(img.getAttribute('height')),
+                src: img.src,
+                msrc: img.getAttribute('data-thumb') || img.src,
+                el: el
+            }
+
+            if (figcaption) {
+                aux.title = figcaption.innerHTML;
+            }
+
+            this.items.push(aux);
+        }
+    }
+
     public static createGallery(container: HTMLElement) {
         /// The process of wrapping image with figure tag is done using JavaScript instead of only Hugo markdown render hook
         /// because it can not detect whether image is being wrapped by a link or not
@@ -94,10 +119,12 @@ class StackGallery {
             if (!currentGallery.length) {
                 /// First iteration
                 currentGallery = [figure];
-            } else if (figure.previousElementSibling === currentGallery[currentGallery.length - 1]) {
+            }
+            else if (figure.previousElementSibling === currentGallery[currentGallery.length - 1]) {
                 /// Adjacent figures
                 currentGallery.push(figure);
-            } else if (currentGallery.length) {
+            }
+            else if (currentGallery.length) {
                 /// End gallery
                 StackGallery.wrap(currentGallery);
                 currentGallery = [figure];
@@ -111,7 +138,7 @@ class StackGallery {
 
     /**
      * Wrap adjacent figure tags with div.gallery
-     * @param figures
+     * @param figures 
      */
     public static wrap(figures: HTMLElement[]) {
         const galleryContainer = document.createElement('div');
@@ -137,36 +164,11 @@ class StackGallery {
                     pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
                     rect = thumbnail.getBoundingClientRect();
 
-                return {x: rect.left, y: rect.top + pageYScroll, w: rect.width};
+                return { x: rect.left, y: rect.top + pageYScroll, w: rect.width };
             }
         });
 
         ps.init();
-    }
-
-    private loadItems(container: HTMLElement) {
-        this.items = [];
-
-        const figures = container.querySelectorAll('figure.gallery-image');
-
-        for (const el of figures) {
-            const figcaption = el.querySelector('figcaption'),
-                img = el.querySelector('img');
-
-            let aux: PhotoSwipeItem = {
-                w: parseInt(img.getAttribute('width')),
-                h: parseInt(img.getAttribute('height')),
-                src: img.src,
-                msrc: img.getAttribute('data-thumb') || img.src,
-                el: el
-            }
-
-            if (figcaption) {
-                aux.title = figcaption.innerHTML;
-            }
-
-            this.items.push(aux);
-        }
     }
 
     private bindClick() {

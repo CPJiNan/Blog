@@ -31,7 +31,8 @@ class StackColorScheme {
             if (this.isDark()) {
                 /// Disable dark mode
                 this.currentScheme = 'light';
-            } else {
+            }
+            else {
                 this.currentScheme = 'dark';
             }
 
@@ -60,7 +61,8 @@ class StackColorScheme {
     private setBodyClass() {
         if (this.isDark()) {
             document.documentElement.dataset.scheme = 'dark';
-        } else {
+        }
+        else {
             document.documentElement.dataset.scheme = 'light';
         }
 
@@ -78,7 +80,8 @@ class StackColorScheme {
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
             if (e.matches) {
                 this.systemPreferScheme = 'dark';
-            } else {
+            }
+            else {
                 this.systemPreferScheme = 'light';
             }
             this.setBodyClass();

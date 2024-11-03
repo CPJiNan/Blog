@@ -1,12 +1,12 @@
-<script .Site.Params.comments.utterances.label
-        async
+<script src="https://utteranc.es/client.js" 
+        repo="{{ .Site.Params.comments.utterances.repo }}"
+        issue-term="{{ .Site.Params.comments.utterances.issueTerm }}"
+        {{ with .Site.Params.comments.utterances.label }}
+        label="{{ . }}"
+        {{ end }}
         crossorigin="anonymous"
-        end issue-term="{{ .Site.Params.comments.utterances.issueTerm }}" label="{{ . }}" repo="{{ .Site.Params.comments.utterances.repo }}"
-        src="https://utteranc.es/client.js"
-        with {{ {{
-        }}
-        }}
->
+        async
+        >
 </script>
 
 <style>

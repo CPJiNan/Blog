@@ -1,43 +1,43 @@
 {{- $title := partialCached "data/title" . .RelPermalink -}}
 {{- $description := partialCached "data/description" . .RelPermalink -}}
 
-<meta printf property='og:title' {{ "content=%q" $title | safeHTMLAttr }}>
-<meta printf property='og:description' {{ "content=%q" $description | safeHTMLAttr }}>
-<meta content='{{ .Permalink }}' property='og:url'>
-<meta content='{{ .Site.Title }}' property='og:site_name'>
-<meta content='
+<meta property='og:title' {{ printf "content=%q" $title | safeHTMLAttr }}>
+<meta property='og:description' {{ printf "content=%q" $description | safeHTMLAttr }}>
+<meta property='og:url' content='{{ .Permalink }}'>
+<meta property='og:site_name' content='{{ .Site.Title }}'>
+<meta property='og:type' content='
     {{- if .IsPage -}}
         article
     {{- else -}}
         website
     {{- end -}}
-' property='og:type'>
+'>
 
 {{- with .Params.locale -}}
-<meta content='{{ . }}' property='og:locale'>
+    <meta property='og:locale' content='{{ . }}'>
 {{- end -}}
 
 {{- if .IsPage -}}
-<meta content='{{ .Section | title }}' property='article:section'/>
-{{- range .Params.tags -}}
-<meta content='{{ . }}' property='article:tag'/>
-{{- end -}}
+    <meta property='article:section' content='{{ .Section | title }}' />
+    {{- range .Params.tags -}}
+        <meta property='article:tag' content='{{ . }}' />
+    {{- end -}}
 {{- end -}}
 
 {{- if .IsPage -}}
-{{- if not .Date.IsZero -}}
-<meta content='{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}' property='article:published_time'/>
-{{- end -}}
-{{- if not .Lastmod.IsZero -}}
-<meta content='{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" | safeHTML }}' property='article:modified_time'/>
-{{- end -}}
+    {{- if not .Date.IsZero -}}
+        <meta property='article:published_time' content='{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}'/>
+    {{- end -}}
+    {{- if not .Lastmod.IsZero -}}
+        <meta property='article:modified_time' content='{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" | safeHTML }}'/>
+    {{- end -}}
 {{- else -}}
-{{- if not .Site.Lastmod.IsZero -}}
-<meta content='{{ .Site.Lastmod.Format " 2006-01-02T15:04:05-07:00 " | safeHTML }}' property='og:updated_time'/>
-{{- end -}}
+    {{- if not .Site.Lastmod.IsZero -}}
+        <meta property='og:updated_time' content='{{ .Site.Lastmod.Format " 2006-01-02T15:04:05-07:00 " | safeHTML }}'/>
+    {{- end -}}
 {{- end -}}
 
 {{ $image := partialCached "helper/image" (dict "Context" . "Type" "opengraph") .RelPermalink "opengraph" }}
 {{- if $image.exists -}}
-<meta content='{{ absURL $image.permalink }}' property='og:image'/>
+    <meta property='og:image' content='{{ absURL $image.permalink }}' />
 {{- end -}}
