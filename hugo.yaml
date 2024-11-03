@@ -1,4 +1,4 @@
-baseurl: https://cpjinan.github.io/Blog/
+baseurl: https://cpjinan.github.io/Blog
 languageCode: en-us
 theme: hugo-theme-stack
 title: Example Site
