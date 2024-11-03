@@ -1,71 +1,71 @@
 toggleMenu:
-    other: Skryť menu
+  other: Skryť menu
 
 darkMode:
-    other: Tmavý režim
+  other: Tmavý režim
 
 list:
-    page:
-        one: "{{ .Count }} stránka"
-        other: "{{ .Count }} stránok"
+  page:
+    one: "{{ .Count }} stránka"
+    other: "{{ .Count }} stránok"
 
-    section:
-        other: Kategórie
+  section:
+    other: Kategórie
 
-    subsection:
-        one: Podkategória
-        other: Podkategórie
+  subsection:
+    one: Podkategória
+    other: Podkategórie
 
 article:
-    back:
-        other: Späť
+  back:
+    other: Späť
 
-    tableOfContents:
-        other: Obsah
+  tableOfContents:
+    other: Obsah
 
-    relatedContent:
-        other: Súvisiace
+  relatedContent:
+    other: Súvisiace
 
-    lastUpdatedOn:
-        other: Naposledy aktualizované
+  lastUpdatedOn:
+    other: Naposledy aktualizované
 
-    readingTime:
-        one: "{{ .Count }} minúta"
-        other: "{{ .Count }} minút"
+  readingTime:
+    one: "{{ .Count }} minúta"
+    other: "{{ .Count }} minút"
 
 notFound:
-    title:
-        other: Nenájdené
+  title:
+    other: Nenájdené
 
-    subtitle:
-        other: Tato stránka neexistuje
+  subtitle:
+    other: Tato stránka neexistuje
 
 widget:
-    archives:
-        title:
-            other: Archívy
-        more:
-            other: Viac
-    tagCloud:
-        title:
-            other: Štítky
-    categoriesCloud:
-        title:
-            other: Kategórie
+  archives:
+    title:
+      other: Archívy
+    more:
+      other: Viac
+  tagCloud:
+    title:
+      other: Štítky
+  categoriesCloud:
+    title:
+      other: Kategórie
 
 search:
-    title:
-        other: Hladať
+  title:
+    other: Hladať
 
-    placeholder:
-        other: Zadajte niečo...
+  placeholder:
+    other: Zadajte niečo...
 
-    resultTitle:
-        other: "#PAGES_COUNT stránok (#TIME_SECONDS sekúnd)"
+  resultTitle:
+    other: "#PAGES_COUNT stránok (#TIME_SECONDS sekúnd)"
 
 footer:
-    builtWith:
-        other: Vytvorené pomocou {{ .Generator }}
+  builtWith:
+    other: Vytvorené pomocou {{ .Generator }}
 
-    designedBy:
-        other: Šablóna {{ .Theme }} od {{ .DesignedBy }}
+  designedBy:
+    other: Šablóna {{ .Theme }} od {{ .DesignedBy }}

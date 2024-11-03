@@ -6,12 +6,12 @@
 *   @link: https://github.com/CaiJimmy/hugo-theme-stack
 */
 import StackGallery from "ts/gallery";
-import { getColor } from 'ts/color';
+import {getColor} from 'ts/color';
 import menu from 'ts/menu';
 import createElement from 'ts/createElement';
 import StackColorScheme from 'ts/colorScheme';
-import { setupScrollspy } from 'ts/scrollspy';
-import { setupSmoothAnchors } from "ts/smoothAnchors";
+import {setupScrollspy} from 'ts/scrollspy';
+import {setupSmoothAnchors} from "ts/smoothAnchors";
 
 let Stack = {
     init: () => {
@@ -61,7 +61,7 @@ let Stack = {
 
         /**
          * Add copy button to code block
-        */
+         */
         const highlights = document.querySelectorAll('.article-content div.highlight');
         const copyText = `Copy`,
             copiedText = `Copied!`;

@@ -1,19 +1,20 @@
 {{ define "body-class" }}template-search{{ end }}
 {{ define "head" }}
-    {{- with .OutputFormats.Get "json" -}} 
-        <link rel="preload" href="{{ .RelPermalink }}" as="fetch" crossorigin="anonymous">
-    {{- end -}}
+{{- with .OutputFormats.Get "json" -}}
+<link as="fetch" crossorigin="anonymous" href="{{ .RelPermalink }}" rel="preload">
+{{- end -}}
 {{ end }}
 {{ define "main" }}
-<form action="{{ .RelPermalink }}" class="search-form"{{ with .OutputFormats.Get "json" -}} data-json="{{ .RelPermalink }}"{{- end }}>
-    <p>
-        <label>{{ T "search.title" }}</label>
-        <input name="keyword" placeholder="{{ T `search.placeholder` }}" />
-    </p>
+<form .OutputFormats.Get action="{{ .RelPermalink }}" class="search-form" with
+      {{ "json" -}} data-json="{{ .RelPermalink }}"{{- end }}>
+<p>
+    <label>{{ T "search.title" }}</label>
+    <input name="keyword" placeholder="{{ T `search.placeholder` }}"/>
+</p>
 
-    <button title="{{ T `search.title` }}">
-        {{ partial "helper/icon" "search" }}
-    </button>
+<button title="{{ T `search.title` }}">
+    {{ partial "helper/icon" "search" }}
+</button>
 </form>
 
 <div class="search-result">
@@ -27,7 +28,7 @@
 
 {{- $opts := dict "minify" hugo.IsProduction "JSXFactory" "createElement" -}}
 {{- $searchScript := resources.Get "ts/search.tsx" | js.Build $opts -}}
-<script type="text/javascript" src="{{ $searchScript.RelPermalink }}" defer></script>
+<script defer src="{{ $searchScript.RelPermalink }}" type="text/javascript"></script>
 
 {{ partialCached "footer/footer" . }}
 {{ end }}
