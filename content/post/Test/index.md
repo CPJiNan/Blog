@@ -3,7 +3,7 @@ title: 测试
 description: Test
 date: 2024-11-03
 slug: test
-image: github.png
+image: kotlin.png
 categories:
     - 测试
     - Test
