@@ -7,11 +7,11 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Example Person</copyright><atom:link href="https://cpjinan.github.io/Blog/page/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>About</title>
-        <link>https://cpjinan.github.io/Blog/about/</link>
+        <title>关于</title>
+        <link>https://cpjinan.github.io/Blog/%E5%85%B3%E4%BA%8E/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://cpjinan.github.io/Blog/about/</guid>
+        <guid>https://cpjinan.github.io/Blog/%E5%85%B3%E4%BA%8E/</guid>
         <description></description>
         </item>
         <item>

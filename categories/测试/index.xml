@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>演示站点</title>
-        <link>https://cpjinan.github.io/Blog/</link>
-        <description>Recent content on 演示站点</description>
+        <title>测试 on 演示站点</title>
+        <link>https://cpjinan.github.io/Blog/categories/%E6%B5%8B%E8%AF%95/</link>
+        <description>Recent content in 测试 on 演示站点</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Wed, 09 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://cpjinan.github.io/Blog/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 09 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://cpjinan.github.io/Blog/categories/%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Chinese Test</title>
         <link>https://cpjinan.github.io/Blog/p/test-chinese/</link>
         <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
@@ -95,38 +95,6 @@
 &lt;/div&gt;&lt;p&gt;相册语法来自 &lt;a class=&#34;link&#34; href=&#34;https://typlog.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Typlog&lt;/a&gt;&lt;/p&gt;
 </description>
-        </item>
-        <item>
-        <title>关于</title>
-        <link>https://cpjinan.github.io/Blog/%E5%85%B3%E4%BA%8E/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://cpjinan.github.io/Blog/%E5%85%B3%E4%BA%8E/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>归档</title>
-        <link>https://cpjinan.github.io/Blog/archives/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://cpjinan.github.io/Blog/archives/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>链接</title>
-        <link>https://cpjinan.github.io/Blog/%E9%93%BE%E6%8E%A5/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://cpjinan.github.io/Blog/%E9%93%BE%E6%8E%A5/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>搜索</title>
-        <link>https://cpjinan.github.io/Blog/search/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://cpjinan.github.io/Blog/search/</guid>
-        <description></description>
         </item>
         
     </channel>

@@ -3,20 +3,30 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://cpjinan.github.io/Blog/</loc>
-  </url><url>
-    <loc>https://cpjinan.github.io/Blog/p/</loc>
-  </url><url>
-    <loc>https://cpjinan.github.io/Blog/about/</loc>
+    <lastmod>2020-09-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://cpjinan.github.io/Blog/categories/</loc>
+    <lastmod>2020-09-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://cpjinan.github.io/Blog/p/test-chinese/</loc>
+    <lastmod>2020-09-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://cpjinan.github.io/Blog/post/</loc>
+    <lastmod>2020-09-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://cpjinan.github.io/Blog/categories/test/</loc>
+    <lastmod>2020-09-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://cpjinan.github.io/Blog/categories/%E6%B5%8B%E8%AF%95/</loc>
+    <lastmod>2020-09-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://cpjinan.github.io/Blog/categories/kotlin/</loc>
   </url><url>
     <loc>https://cpjinan.github.io/Blog/page/</loc>
   </url><url>
-    <loc>https://cpjinan.github.io/Blog/post/</loc>
-  </url><url>
     <loc>https://cpjinan.github.io/Blog/tags/</loc>
+  </url><url>
+    <loc>https://cpjinan.github.io/Blog/%E5%85%B3%E4%BA%8E/</loc>
   </url><url>
     <loc>https://cpjinan.github.io/Blog/archives/</loc>
   </url><url>
