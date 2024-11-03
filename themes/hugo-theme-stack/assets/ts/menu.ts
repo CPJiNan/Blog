@@ -1,8 +1,8 @@
 /**
  * Slide up/down
  * Code from https://dev.to/bmsvieira/vanilla-js-slidedown-up-4dkn
- * @param target 
- * @param duration 
+ * @param target
+ * @param duration
  */
 let slideUp = (target: HTMLElement, duration = 500) => {
     target.classList.add('transiting');

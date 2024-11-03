@@ -7,10 +7,12 @@
         box-shadow: var(--shadow-l1);
         padding: var(--card-padding);
     }
+
     :root[data-scheme="dark"] {
         --twikoo-body-text-color-main: rgba(255, 255, 255, 0.9);
         --twikoo-body-text-color: rgba(255, 255, 255, 0.7);
     }
+
     .twikoo .el-input-group__prepend,
     .twikoo .tk-action-icon,
     .twikoo .tk-submit-action-icon,
@@ -19,6 +21,7 @@
     .twikoo .tk-comments-count {
         color: var(--twikoo-body-text-color);
     }
+
     .twikoo .el-input__inner,
     .twikoo .el-textarea__inner,
     .twikoo .tk-preview-container,
@@ -27,12 +30,15 @@
     .twikoo .tk-send {
         color: var(--twikoo-body-text-color-main);
     }
-    .twikoo .el-button{
-        color: var(--twikoo-body-text-color)!important;
+
+    .twikoo .el-button {
+        color: var(--twikoo-body-text-color) !important;
     }
+
     .twikoo .el-input__count {
         color: var(--twikoo-body-text-color) !important;
     }
+
     .OwO .OwO-body {
         background-color: var(--body-background) !important;
         color: var(--body-text-color) !important;
@@ -44,15 +50,45 @@
     twikoo.init({
         envId: '{{- .envId -}}',
         el: '#tcomment',
-        {{- with .region -}}
-        region: '{{- . -}}',
-        {{- end -}}
-        {{- with .path -}}
-        path: '{{- . -}}',
-        {{- end -}}
-        {{- with .lang -}}
-        lang: '{{- . -}}',
-        {{- end -}}
+    {
+        {
+            -
+            with .
+            region -
+        }
+    }
+    region: '{{- . -}}',
+        {
+    {
+        -end -
+    }
+    }
+    {
+        {
+            -
+            with .
+            path -
+        }
+    }
+    path: '{{- . -}}',
+        {
+    {
+        -end -
+    }
+    }
+    {
+        {
+            -
+            with .
+            lang -
+        }
+    }
+    lang: '{{- . -}}',
+        {
+    {
+        -end -
+    }
+    }
     })
 </script>
 {{- end -}}
