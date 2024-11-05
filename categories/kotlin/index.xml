@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>季楠</title>
-        <link>https://cpjinan.github.io/Blog/</link>
-        <description>Recent content on 季楠</description>
+        <title>Kotlin on 季楠</title>
+        <link>https://cpjinan.github.io/Blog/categories/kotlin/</link>
+        <description>Recent content in Kotlin on 季楠</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>CPJiNan</copyright>
-        <lastBuildDate>Tue, 05 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://cpjinan.github.io/Blog/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 05 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://cpjinan.github.io/Blog/categories/kotlin/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>&lt;Bukkit 插件开发笔记 Chapter.1&gt; 命令参数解析</title>
         <link>https://cpjinan.github.io/Blog/p/1/</link>
         <pubDate>Tue, 05 Nov 2024 00:00:00 +0000</pubDate>
@@ -92,38 +92,6 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description>
-        </item>
-        <item>
-        <title>关于</title>
-        <link>https://cpjinan.github.io/Blog/%E5%85%B3%E4%BA%8E/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://cpjinan.github.io/Blog/%E5%85%B3%E4%BA%8E/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>归档</title>
-        <link>https://cpjinan.github.io/Blog/archives/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://cpjinan.github.io/Blog/archives/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>链接</title>
-        <link>https://cpjinan.github.io/Blog/%E9%93%BE%E6%8E%A5/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://cpjinan.github.io/Blog/%E9%93%BE%E6%8E%A5/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>搜索</title>
-        <link>https://cpjinan.github.io/Blog/search/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://cpjinan.github.io/Blog/search/</guid>
-        <description></description>
         </item>
         
     </channel>
