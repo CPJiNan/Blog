@@ -1,12 +1,11 @@
 ---
-title: 测试
+title: "UI 制作 #1 VitaSell"
 date: 2024-11-16
 slug: 2
-image: kotlin.png
+image: 封面.png
 categories:
-    - 测试
-    - Test
+  - 我的世界
 ---
 
-## 测试标题
-测试内容
+![](界面预览.png)
+[出售界面配置.zip](出售界面配置.zip)
