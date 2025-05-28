@@ -4,7 +4,7 @@ date: 2022-11-05
 slug: 1
 image: 封面.png
 categories:
-    - 日常
+  - 日常
 ---
 
 「今天的你已经很努力啦——  
