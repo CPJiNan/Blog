@@ -211,12 +211,6 @@ menu:
           params:
               icon: brand-github
 
-        - identifier: bilibili
-          name: Bilibili
-          url: https://space.bilibili.com/489740670
-          params:
-              icon: brand-bilibili
-
 related:
     includeNewer: true
     threshold: 60
