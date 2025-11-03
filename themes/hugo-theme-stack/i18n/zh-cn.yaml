@@ -2,7 +2,7 @@ toggleMenu:
     other: 切换菜单
 
 darkMode:
-    other: 深色模式
+    other: 暗色模式
 
 list:
     page: "{{ .Count }} 个页面"
@@ -59,4 +59,9 @@ search:
     resultTitle:
         other: "#PAGES_COUNT 个结果 （用时 #TIME_SECONDS 秒）"
 
-footer: { }
+footer:
+    builtWith:
+        other: 使用 {{ .Generator }} 构建
+
+    designedBy:
+        other: 主题 {{ .Theme }} 由 {{ .DesignedBy }} 设计
