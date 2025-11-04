@@ -59,4 +59,9 @@ search:
     resultTitle:
         other: "#PAGES_COUNT 个结果 （用时 #TIME_SECONDS 秒）"
 
-footer: { }
+footer:
+  builtWith:
+    other: ""
+
+  designedBy:
+    other: ""
